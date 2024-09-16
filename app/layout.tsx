@@ -4,6 +4,7 @@ import StairTransition from "@/components/StairTransition";
 import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/app/providers";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -22,11 +23,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={jetbrainsMono.variable}>
-        <Header />
-        <StairTransition />
-        <PageTransition>{children}</PageTransition>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${jetbrainsMono.variable} font-primary`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Header />
+          <StairTransition />
+          <PageTransition>{children}</PageTransition>
+        </ThemeProvider>
       </body>
     </html>
   );

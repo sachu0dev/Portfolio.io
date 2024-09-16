@@ -18,7 +18,7 @@ const Photo = () => {
             opacity: 1,
             transition: { delay: 2.4, duration: 0.4, ease: "easeInOut" },
           }}
-          className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute rounded-full overflow-hidden"
+          className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px]  absolute rounded-full overflow-hidden"
         >
           <Image
             src="/assets/Photo.png"

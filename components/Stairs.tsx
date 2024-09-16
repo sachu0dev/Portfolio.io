@@ -19,13 +19,13 @@ const reverseIndex = (index: number) => {
 };
 
 const colors = [
-  "#cc6666", // Dark Red
-  "#66cc66", // Dark Green
-  "#6666cc", // Dark Blue
-  "#cc66cc", // Dark Pink
-  "#cccc66", // Dark Yellow
-  "#66cccc", // Dark Cyan
-];
+  "#A8D5A2",  // Light Green
+  "#8BCC8E",  // Medium Light Green
+  "#6ABF6A",  // Medium Green
+  "#4CA64C",  // Medium Dark Green
+  "#2E8B57",  // Dark Green
+  "#1E6F3F"   // Very Dark Green
+]
 
 const Stairs = () => {
   return (
