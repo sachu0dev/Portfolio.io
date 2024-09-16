@@ -3,6 +3,7 @@
 import { Description } from '@radix-ui/react-dialog'
 import {FaHtml5, FaCss3, FaJs, FaReact, FaNodeJs} from 'react-icons/fa'
 import {SiTailwindcss, SiNextdotjs} from 'react-icons/si'
+import { SiSocketdotio } from "react-icons/si";
 
 const about = {
   title: "About me",
@@ -109,6 +110,9 @@ const skills = {
     {
       icon: <SiNextdotjs />,
       name: "Next.js",
+    },{
+      icon: <SiSocketdotio />,
+      name: "Socket.io",
     }
   ]
 }
