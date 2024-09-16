@@ -21,7 +21,7 @@ const socails = [
     path: "mailto:sushil.dev.in@gmail.com",
   },
 ];
-const Social = ({ containerStyles, iconStyles }) => {
+const Social = ({ containerStyles, iconStyles }: { containerStyles: string; iconStyles: string }) => {
   return (
     <div className={containerStyles}>
       {socails.map((item, index) => {
