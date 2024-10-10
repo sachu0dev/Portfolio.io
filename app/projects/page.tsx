@@ -1,15 +1,20 @@
 "use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Swiper as SwiperType } from 'swiper/types'; // Import Swiper types
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper as SwiperType } from "swiper/types"; // Import Swiper types
 import { BsArrowUpRight, BsGithub } from "react-icons/bs";
 import Safari from "@/components/magicui/safari";
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import { BorderBeam } from "@/components/magicui/border-beam";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import Link from "next/link";
 import WorkSliderBtns from "@/components/WorkSliderBtns";
 
@@ -17,54 +22,73 @@ const projects = [
   {
     num: "01",
     category: "Fullstack",
-    title: "Kabutar: Real-Time Chat Application",
-    description: "Kabutar: Real-time chat app with React, Node.js, Express, Socket.IO, Cloudinary, and optimized with Redux Toolkit.",
-    stack: ["React", "Node.js", "Express", "Socket.IO", "Cloudinary", "Redux Toolkit"],
-    image: "/assets/projects/p1.png",
+    title: "Nameless Feedback: Anonymous Feedback App",
+    description:
+      "Anonymous feedback platform built with Next.js and MongoDB for open and honest communication.",
+    stack: ["Next.js", "NextAuth.js", "Gemini Ai", "MongoDB", "Resend"],
+    image: "/assets/projects/nameless.png",
     live: "https://kabutar-chat-app.vercel.app",
-    github: "https://github.com/sachu0dev/Kabutar-Chat-app"
+    github: "https://github.com/sachu0dev/Kabutar-Chat-app",
   },
   {
     num: "02",
     category: "Fullstack",
-    title: "Typing Panda: Vanila Fullstack Typing app",
-    description: "Typing Panda: Interactive game to enhance typing skills with customizable features for all skill levels.",
-    stack: ["Html 5", "CSS 3", "JavaScript", "Node.js", "Express", "MongoDB"],
-    image: "/assets/projects/p2.png",
-    live: "https://typingpanda.netlify.app/",
-    github: "https://github.com/sachu0dev/Typing_Panda"
+    title: "Kabutar: Real-Time Chat Application",
+    description:
+      "Kabutar: Real-time chat app with React, Node.js, Express, Socket.IO, Cloudinary, and optimized with Redux Toolkit.",
+    stack: [
+      "React",
+      "Node.js",
+      "Express",
+      "Socket.IO",
+      "Cloudinary",
+      "Redux Toolkit",
+    ],
+    image: "/assets/projects/p1.png",
+    live: "https://kabutar-chat-app.vercel.app",
+    github: "https://github.com/sachu0dev/Kabutar-Chat-app",
   },
   {
     num: "03",
+    category: "Fullstack",
+    title: "Typing Panda: Vanila Fullstack Typing app",
+    description:
+      "Typing Panda: Interactive game to enhance typing skills with customizable features for all skill levels.",
+    stack: ["Html 5", "CSS 3", "JavaScript", "Node.js", "Express", "MongoDB"],
+    image: "/assets/projects/p2.png",
+    live: "https://typingpanda.netlify.app/",
+    github: "https://github.com/sachu0dev/Typing_Panda",
+  },
+  {
+    num: "04",
     category: "Frontend",
     title: "Masalamandi: Swiggy API Integration Project.",
-    description: "Masalamandi: Integrated Swiggy API, developed Redux cart, improved data accuracy by 95%, and boosted engagement by 40%.",
+    description:
+      "Masalamandi: Integrated Swiggy API, developed Redux cart, improved data accuracy by 95%, and boosted engagement by 40%.",
     stack: ["React", "Tailwind CSS", "Redux Toolkit"],
     image: "/assets/projects/p3.png",
     live: "https://masalamandi.vercel.app",
-    github: "https://github.com/sachu0dev/MasalaMandi"
+    github: "https://github.com/sachu0dev/MasalaMandi",
   },
   {
     num: "04",
     category: "Fullstack",
     title: "Inspiration Blog",
-    description: "Developed a full-stack blog platform with React, TypeScript, and Cloudflare Workers, boosting performance, engagement, and database efficiency.",
-    stack: ["React", "Node.js", "Express", "PostgreSQL", "Cloudflare", "Redux Toolkit"],
+    description:
+      "Developed a full-stack blog platform with React, TypeScript, and Cloudflare Workers, boosting performance, engagement, and database efficiency.",
+    stack: [
+      "React",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "Cloudflare",
+      "Redux Toolkit",
+    ],
     image: "/assets/work/thumb1.png",
     live: "",
-    github: ""
+    github: "",
   },
-  {
-    num: "05",
-    category: "Frontend",
-    title: "project 1",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus a repellendus, porro quia.",
-    stack: ["React", "Node.js", "Express", "Socket.IO", "Cloudinary", "Redux Toolkit"],
-    image: "/assets/work/thumb1.png",
-    live: "",
-    github: ""
-  },
-]
+];
 
 const Projects = () => {
   const [project, setProject] = useState(projects[0]);
@@ -75,8 +99,8 @@ const Projects = () => {
   };
 
   return (
-    <motion.section 
-      initial={{ opacity: 0 }} 
+    <motion.section
+      initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { duration: 0.4, ease: "easeIn" } }}
       className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
     >
@@ -98,7 +122,8 @@ const Projects = () => {
             <ul className="flex gap-4 flex-wrap">
               {project.stack.map((item, index) => (
                 <li key={index} className="text-xl text-accent">
-                  {item}{index !== project.stack.length - 1 && ","}
+                  {item}
+                  {index !== project.stack.length - 1 && ","}
                 </li>
               ))}
             </ul>
@@ -131,10 +156,10 @@ const Projects = () => {
             </div>
           </div>
           <div className="w-full xl:w-[50%]">
-            <Swiper 
-              spaceBetween={30} 
-              slidesPerView={1} 
-              className="mb-12" 
+            <Swiper
+              spaceBetween={30}
+              slidesPerView={1}
+              className="mb-12"
               onSlideChange={handleSlideChange}
             >
               {projects.map((item, index) => (
@@ -163,6 +188,3 @@ const Projects = () => {
 };
 
 export default Projects;
-
- 
-
